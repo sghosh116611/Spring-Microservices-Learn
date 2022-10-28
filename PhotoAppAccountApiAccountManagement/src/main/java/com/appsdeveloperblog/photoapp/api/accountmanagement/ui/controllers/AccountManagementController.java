@@ -1,0 +1,16 @@
+package com.appsdeveloperblog.photoapp.api.accountmanagement.ui.controllers;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping("/api/account-management")
+public class AccountManagementController {
+	
+	@GetMapping(path = "/status/check")
+	public String getStatus() {
+		return "working";
+	}
+
+}

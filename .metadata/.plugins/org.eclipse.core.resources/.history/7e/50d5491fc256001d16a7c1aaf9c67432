@@ -1,0 +1,13 @@
+server.port=8010
+spring.application.name=discoveryservice
+eureka.client.registerWithEureka=false
+eureka.client.fetchRegistry=false
+eureka.client.serviceUrl.defaultZone=http://localhost:8010/eureka
+eureka.instance.prefer-ip-address=true
+eureka.server.enableSelfPreservation=false
+
+spring.cloud.gateway.routes[0].id=users-status-check
+spring.cloud.gateway.routes[0].uri=lb://users-ws
+spring.cloud.gateway.routes[0].predicates[0]=Path=/api/users/status/check
+spring.cloud.gateway.routes[0].predicates[1]=Method=GET
+spring.cloud.gateway.routes[0].filters[0]=RemoveRequestHeader=Cookie

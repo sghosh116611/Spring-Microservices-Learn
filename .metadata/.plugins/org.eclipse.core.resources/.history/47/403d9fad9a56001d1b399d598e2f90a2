@@ -1,0 +1,15 @@
+package com.appsdeveloperblog.app.ws.userservice.Impl;
+
+import com.appsdeveloperblog.app.ws.ui.model.request.UserDetailsRequestModel;
+import com.appsdeveloperblog.app.ws.ui.model.response.UserRest;
+import com.appsdeveloperblog.app.ws.userservice.UserService;
+
+public class UserServiceImpl implements UserService{
+
+	@Override
+	public UserRest createUser(UserDetailsRequestModel userDetail) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}
